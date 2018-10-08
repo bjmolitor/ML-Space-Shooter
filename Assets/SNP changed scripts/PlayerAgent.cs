@@ -17,6 +17,8 @@ public class PlayerAgent : Agent
     public float speed;
     public float tilt;
     public Boundary boundary;
+    public Brain manualBrain;
+    public Brain mlBrain;
 
     public GameObject shot;
     public float shotOffset;
@@ -32,6 +34,16 @@ public class PlayerAgent : Agent
 
     // This is an "external" player agent, surviving player ship destruction. So ships needs to be assigned.
     private GameObject pShip;
+
+    public void ManualBrain()
+    {
+        GiveBrain(manualBrain);
+    }
+
+    public void MLBrain()
+    {
+        GiveBrain(mlBrain);
+    }
 
     public void Initialize(GameObject playerShip, Done_GameController gameController)
     {

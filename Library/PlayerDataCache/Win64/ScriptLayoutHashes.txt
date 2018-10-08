@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/bmolitor/UnityProjects/Space Shooter 1.6/Builds/x64/Internal/Space Shooter 1.6.exe
+C:/Users/bmolitor/UnityProjects/ML-Space-Shooter/Builds/x64/Internal/ML Space Shooter.exe
 SceneListBegin?
 Assets/_Complete-Game/Scenes/Done_Main.unity
 SceneListEnd?
@@ -223,7 +223,7 @@ c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBe
 69e2539fb6bb0c2f820e3ecea5dc7d20 Assembly-CSharp.dll:.BananaAgent
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 3971df434e8b48ab86e9d9511082c15d Assembly-CSharp.dll:MLAgents.FlyCamera
-937034f5f1200c81dd1f021335df4f36 Assembly-CSharp.dll:.PlayerAgent
+a5f6be849f484654b508e386f504209f Assembly-CSharp.dll:.PlayerAgent
 e6af79a0ae6c367d0f8146bf72248ea7 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyCountdownPanel
 c5d6c27ffb666d24005c57339b02f0fa Assembly-CSharp.dll:.PyramidAgent
 a6e71dd16bad77c3dccd2f79e34da35a Assembly-CSharp.dll:MLAgents.GroundContact

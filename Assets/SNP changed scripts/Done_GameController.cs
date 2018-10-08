@@ -42,7 +42,6 @@ public class Done_GameController : MonoBehaviour
         restart = false;
         restartText.text = "";
         gameOverText.text = "";
-        brainSwitch.text = "";
         score = 0;
         UpdateScore();
         playerAgent.Initialize(Instantiate(playerShip), this);
@@ -52,19 +51,19 @@ public class Done_GameController : MonoBehaviour
     void Update()
     {
         // There is more to it, then this.
-        /*if (Input.GetKeyDown(KeyCode.R) && playerAgent.brain.brainType != BrainType.Player)
+        if (Input.GetKeyDown(KeyCode.P) && playerAgent.brain.brainType != BrainType.Player)
         {
             //Switch to player brain
-            playerAgent.brain.brainType = BrainType.Player;
+            playerAgent.ManualBrain();
             brainSwitch.text = "Press 'M' to let the machine play.";
         }
 
         if (Input.GetKeyDown(KeyCode.M) && playerAgent.brain.brainType == BrainType.Player)
         {
-            //Switch to player brain
-            playerAgent.brain.brainType = BrainType.Internal;
+            //Switch to machine learning brain
+            playerAgent.MLBrain();
             brainSwitch.text = "Press 'P' to play!";
-        }*/
+        }
 
         if (restart)
         {
