@@ -152,7 +152,7 @@
     <Compile Include="Assets\ML-Agents\Scripts\RpcCommunicator.cs" />
     <Compile Include="Assets\ML-Agents\Scripts\SocketCommunicator.cs" />
     <Compile Include="Assets\ML-Agents\Scripts\UnityAgentsException.cs" />
-    <Compile Include="Assets\Planet Earth Free\SpinFree.cs" />
+    <Compile Include="Assets\New\Planet Earth Free\SpinFree.cs" />
     <Compile Include="Assets\SNP changed scripts\DestroyByPosition.cs" />
     <Compile Include="Assets\SNP changed scripts\DestroyOnBecameInvisible.cs" />
     <Compile Include="Assets\SNP changed scripts\Done_DestroyByContact.cs" />
@@ -185,9 +185,15 @@
     <Compile Include="Assets\Space Shooter Tutorial\SampleScenes\Scripts\NetworkSpaceship.cs" />
     <Compile Include="Assets\Space Shooter Tutorial\SampleScenes\Scripts\NetworkSpaceshipBullet.cs" />
     <Compile Include="Assets\Space Shooter Tutorial\TutorialInfo\Scripts\Readme.cs" />
+    <None Include="Assets\New\SpaceFighter\GlassStainedBumpDistort.shader" />
+    <None Include="Assets\New\Modular Space Raider\readme.txt" />
+    <None Include="Assets\New\Modular Space Raider\Shader\how_to_use.txt" />
     <None Include="Assets\Space Shooter Tutorial\Lobby\Documentation.txt" />
+    <None Include="Assets\New\Modular Space Raider\Shader\Dynamic_Illum_Spec.shader" />
     <None Include="Assets\Space Shooter Tutorial\Lobby\Instruction.txt" />
     <None Include="Assets\Space Shooter Tutorial\Fonts\OpenSans\License!.txt" />
+    <None Include="Assets\New\SpaceShipPack\READ ME!.txt" />
+    <None Include="Assets\New\StarSparrow\ReadMe.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/bmolitor/UnityProjects/ML-Space-Shooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
