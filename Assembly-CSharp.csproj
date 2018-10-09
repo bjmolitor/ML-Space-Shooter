@@ -60,25 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_BGScroller.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_DestroyByBoundary.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_DestroyByTime.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_EvasiveManeuver.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_Mover.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_RandomRotator.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_WeaponController.cs" />
-    <Compile Include="Assets\Lobby\Scripts\DraggablePanel.cs" />
-    <Compile Include="Assets\Lobby\Scripts\EventSystemChecker.cs" />
-    <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyCountdownPanel.cs" />
-    <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyHook.cs" />
-    <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyInfoPanel.cs" />
-    <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyMainMenu.cs" />
-    <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyManager.cs" />
-    <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyPlayer.cs" />
-    <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyPlayerList.cs" />
-    <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyServerEntry.cs" />
-    <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyServerList.cs" />
-    <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyTopPanel.cs" />
     <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DAcademy.cs" />
     <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DAgent.cs" />
     <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DDecision.cs" />
@@ -171,11 +152,7 @@
     <Compile Include="Assets\ML-Agents\Scripts\RpcCommunicator.cs" />
     <Compile Include="Assets\ML-Agents\Scripts\SocketCommunicator.cs" />
     <Compile Include="Assets\ML-Agents\Scripts\UnityAgentsException.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\NetworkAsteroid.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\NetworkGameManager.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\NetworkLobbyHook.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\NetworkSpaceship.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\NetworkSpaceshipBullet.cs" />
+    <Compile Include="Assets\Planet Earth Free\SpinFree.cs" />
     <Compile Include="Assets\SNP changed scripts\DestroyByPosition.cs" />
     <Compile Include="Assets\SNP changed scripts\DestroyOnBecameInvisible.cs" />
     <Compile Include="Assets\SNP changed scripts\Done_DestroyByContact.cs" />
@@ -183,10 +160,34 @@
     <Compile Include="Assets\SNP changed scripts\Done_PlayerController.cs" />
     <Compile Include="Assets\SNP changed scripts\PlayerAgent.cs" />
     <Compile Include="Assets\SNP changed scripts\SpaceShooterAcademy.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <None Include="Assets\Lobby\Documentation.txt" />
-    <None Include="Assets\Lobby\Instruction.txt" />
-    <None Include="Assets\Fonts\OpenSans\License!.txt" />
+    <Compile Include="Assets\Space Shooter Tutorial\_Complete-Game\Scripts\Done_BGScroller.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\_Complete-Game\Scripts\Done_DestroyByBoundary.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\_Complete-Game\Scripts\Done_DestroyByTime.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\_Complete-Game\Scripts\Done_EvasiveManeuver.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\_Complete-Game\Scripts\Done_Mover.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\_Complete-Game\Scripts\Done_RandomRotator.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\_Complete-Game\Scripts\Done_WeaponController.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\Lobby\Scripts\DraggablePanel.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\Lobby\Scripts\EventSystemChecker.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\Lobby\Scripts\Lobby\LobbyCountdownPanel.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\Lobby\Scripts\Lobby\LobbyHook.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\Lobby\Scripts\Lobby\LobbyInfoPanel.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\Lobby\Scripts\Lobby\LobbyMainMenu.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\Lobby\Scripts\Lobby\LobbyManager.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\Lobby\Scripts\Lobby\LobbyPlayer.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\Lobby\Scripts\Lobby\LobbyPlayerList.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\Lobby\Scripts\Lobby\LobbyServerEntry.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\Lobby\Scripts\Lobby\LobbyServerList.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\Lobby\Scripts\Lobby\LobbyTopPanel.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\SampleScenes\Scripts\NetworkAsteroid.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\SampleScenes\Scripts\NetworkGameManager.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\SampleScenes\Scripts\NetworkLobbyHook.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\SampleScenes\Scripts\NetworkSpaceship.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\SampleScenes\Scripts\NetworkSpaceshipBullet.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\TutorialInfo\Scripts\Readme.cs" />
+    <None Include="Assets\Space Shooter Tutorial\Lobby\Documentation.txt" />
+    <None Include="Assets\Space Shooter Tutorial\Lobby\Instruction.txt" />
+    <None Include="Assets\Space Shooter Tutorial\Fonts\OpenSans\License!.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/bmolitor/UnityProjects/ML-Space-Shooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

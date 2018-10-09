@@ -65,7 +65,7 @@
     <Compile Include="Assets\ML-Agents\Editor\ResetParameterDrawer.cs" />
     <Compile Include="Assets\ML-Agents\Editor\Tests\EditModeTestActionMasker.cs" />
     <Compile Include="Assets\ML-Agents\Editor\Tests\MLAgentsEditModeTest.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+    <Compile Include="Assets\Space Shooter Tutorial\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/bmolitor/UnityProjects/ML-Space-Shooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
