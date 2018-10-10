@@ -2,7 +2,7 @@ WindowsStandalone
 PlayerPath?
 C:/Users/bmolitor/UnityProjects/ML-Space-Shooter/Builds/x64/Internal/ML Space Shooter.exe
 SceneListBegin?
-Assets/_Complete-Game/Scenes/Done_Main.unity
+Assets/Scenes/Done_Main.unity
 SceneListEnd?
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.NetworkLobbyHook
 809c545a156891b4a98ea6031460459c Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyMainMenu
@@ -271,6 +271,7 @@ fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networki
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:MLAgents.Area
 03f24f98d6fb0f87d808d5a143434f8b Assembly-CSharp.dll:.NetworkGameManager
 02923581fefff3b9f617a0b46688adba Assembly-CSharp.dll:.TemplateAcademy
+84036f92b02ff174d5a4658ec37ec77b Assembly-CSharp.dll:.SpinFree
 fb7a2ff881187f0cf44c2543e68e162e Assembly-CSharp.dll:.CrawlerAgent
 72a8523b432c0a5317826b7a9e0a0e79 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 e53cc67d84060d628c7f03fc725766d8 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
@@ -309,7 +310,7 @@ bc929f3d62c26e9c13e3f0215e1a1036 Assembly-CSharp.dll:.BananaAcademy
 1e847435a6ffbe2a23ddc71dd483001d Assembly-CSharp.dll:.NetworkSpaceship
 ca298f63a4eee8be2eb45cbdb839b236 Assembly-CSharp.dll:.BouncerAgent
 3ccc89741bf4e3114d604e9bf2546688 Assembly-CSharp.dll:MLAgents.CoreBrainInternal
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.DestroyByPosition
+48435d06675d3698a1a5d0b87058e271 Assembly-CSharp.dll:.DestroyByPosition
 8527021e0d71189fe9dbdc0cbd773e4b Assembly-CSharp.dll:.ReacherGoal
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 02923581fefff3b9f617a0b46688adba Assembly-CSharp.dll:.PyramidAcademy
@@ -402,4 +403,4 @@ aa5e3523afd7fd907d3f99da4b777fdc Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 c8a41ce4eea7677f6dd2aa0e422a2f04 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-d5a8127477ead6e96e53d5dfa71433bc Assembly-CSharp.dll:.Done_GameController
+05ba440cdf6230a94e1ffb01dcf037fa Assembly-CSharp.dll:.Done_GameController

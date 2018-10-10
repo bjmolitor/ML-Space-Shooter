@@ -152,7 +152,7 @@
     <Compile Include="Assets\ML-Agents\Scripts\RpcCommunicator.cs" />
     <Compile Include="Assets\ML-Agents\Scripts\SocketCommunicator.cs" />
     <Compile Include="Assets\ML-Agents\Scripts\UnityAgentsException.cs" />
-    <Compile Include="Assets\New\Planet Earth Free\SpinFree.cs" />
+    <Compile Include="Assets\Planet Earth\SpinFree.cs" />
     <Compile Include="Assets\SNP changed scripts\DestroyByPosition.cs" />
     <Compile Include="Assets\SNP changed scripts\DestroyOnBecameInvisible.cs" />
     <Compile Include="Assets\SNP changed scripts\Done_DestroyByContact.cs" />

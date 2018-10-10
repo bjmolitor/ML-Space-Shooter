@@ -192,7 +192,6 @@ public class PlayerAgent : Agent
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         rBody.velocity = movement * speed;
-        //Debug.Log("Horizontal: " + moveHorizontal + " Vertical: " + moveVertical);
 
         // Prevent ship from leaving the screen
         rBody.position = new Vector3

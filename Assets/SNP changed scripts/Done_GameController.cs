@@ -9,6 +9,9 @@ public class Done_GameController : MonoBehaviour
 {
     public GameObject playerShip;
     public GameObject[] hazards;
+    public GameObject earth;
+    public float spawnEarth = 8;
+    public float earthScale = 0.4f;
     public Vector3 spawnValues;
     public int hazardCount;
     public float spawnWait;
@@ -20,12 +23,14 @@ public class Done_GameController : MonoBehaviour
     public Text gameOverText;
     public Text brainSwitch;
 
+    private float startTime;
     private bool gameOver;
     private bool restart;
+    private bool earthPassed;
     private int score;
     private List<GameObject> currentHazards = new List<GameObject>();
     private PlayerAgent playerAgent;
-    
+    private GameObject spawnedEarth;
 
     public List<GameObject> CurrentHazards
     {
@@ -40,12 +45,14 @@ public class Done_GameController : MonoBehaviour
         playerAgent = FindObjectOfType<PlayerAgent>();
         gameOver = false;
         restart = false;
+        earthPassed = false;
         restartText.text = "";
         gameOverText.text = "";
         score = 0;
         UpdateScore();
         playerAgent.Initialize(Instantiate(playerShip), this);
         StartCoroutine(SpawnWaves());
+        startTime = Time.time;
     }
 
     void Update()
@@ -55,7 +62,7 @@ public class Done_GameController : MonoBehaviour
         {
             //Switch to player brain
             playerAgent.ManualBrain();
-            brainSwitch.text = "Press 'M' to let the machine play.";
+            brainSwitch.text = "Press 'M' for auto pilot.";
         }
 
         if (Input.GetKeyDown(KeyCode.M) && playerAgent.brain.brainType == BrainType.Player)
@@ -73,6 +80,9 @@ public class Done_GameController : MonoBehaviour
                 Restart();
             }
         }
+
+        if (spawnedEarth == null && Time.time >= startTime + spawnEarth && !gameOver && !earthPassed) SpawnEarth();
+        
     }
 
     private void Restart()
@@ -82,9 +92,13 @@ public class Done_GameController : MonoBehaviour
 
         // Destroy all remaining hazards
         currentHazards.ForEach(h => Destroy(h));
+        //Destroy earth (I always wanted to do this.)
+        Destroy(spawnedEarth);
+        earthPassed = false;
         // Reset score
         score = 0;
         UpdateScore();
+        startTime = Time.time;
         // Restart spawning for human players
         if (gameOver) StartCoroutine(SpawnWaves());
         gameOver = false;
@@ -93,6 +107,13 @@ public class Done_GameController : MonoBehaviour
         restartText.text = "";
         gameOverText.text = "";
 
+    }
+
+    private void SpawnEarth()
+    {
+        spawnedEarth = Instantiate(earth, new Vector3(-3, -14, 30), Quaternion.Euler(0,0,30)); 
+        spawnedEarth.transform.localScale = new Vector3(earthScale, earthScale, earthScale);
+        earthPassed = true;
     }
 
     IEnumerator SpawnWaves()
