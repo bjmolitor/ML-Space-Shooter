@@ -28,6 +28,8 @@ public class Done_GameController : MonoBehaviour
     private bool restart;
     private bool earthPassed;
     private int score;
+    private int numGames;
+    private int overallScore;
     private List<GameObject> currentHazards = new List<GameObject>();
     private PlayerAgent playerAgent;
     private GameObject spawnedEarth;
@@ -167,6 +169,7 @@ public class Done_GameController : MonoBehaviour
             // Size of reward chosen in relation to score to what would be a "good game".
             playerAgent.SetReward(-100);
             playerAgent.Done();
+            Debug.Log("Average AI score after " + ++numGames + " games:" + ((overallScore += score) / numGames));
             // Immediate restart - no actual destroy.
             Restart();
         }

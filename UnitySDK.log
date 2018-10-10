@@ -1,2 +1,92 @@
-10.10.2018 21:49:36
+10.10.2018 23:26:28
  
+Log
+Average AI score after 1 games:3
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 2 games:27
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 3 games:32
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 4 games:45
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 5 games:50
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 6 games:48
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 7 games:42
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 8 games:41
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 9 games:40
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 10 games:49
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 11 games:46
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 12 games:48
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 13 games:46
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 14 games:56
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
+Log
+Average AI score after 15 games:62
+UnityEngine.Debug:Log(Object)
+Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:172)
+Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
+
