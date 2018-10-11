@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -129,8 +129,8 @@ MonoBehaviour:
     y: 0
     width: 391
     height: 947
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -231,8 +231,8 @@ MonoBehaviour:
     y: 0
     width: 544
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -607,20 +607,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/TFModels (AIs)
+    - Assets/SNP changed scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/TFModels (AIs)
+  - Assets/SNP changed scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\bmolitor\UnityProjects\ML-Space-Shooter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 187}
-    m_SelectedIDs: 86420000
-    m_LastClickedID: 17030
-    m_ExpandedIDs: 000000006c2d00004c310000dc3400006c37000086370000043a0000563e0000363f00004e4100008642000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 56410000
+    m_LastClickedID: 16726
+    m_ExpandedIDs: 00000000722d000052310000e2340000723700008c3700000a3a00005e3e00003e3f0000564100008e42000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -648,7 +648,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 364}
     m_SelectedIDs: 8e340000
     m_LastClickedID: 13454
-    m_ExpandedIDs: 000000006c2d00008e2f00004c310000dc3400006c37000086370000043a0000363f00004e41000086420000
+    m_ExpandedIDs: 00000000722d000052310000e2340000723700008c3700000a3a00005e3e00003e3f0000564100008e420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -679,18 +679,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 5a1900004a190000f01b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Space Shooter Tutorial
+      m_OriginalName: Space Shooter Tutorial
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 15966
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 9}
     m_CreateAssetUtility:
@@ -732,21 +732,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: beccddff7ecdddff8ad0ddff50d5ddffccd5ddffd8d8ddff82f8deff28f9deff34fcdeff0071dfff9e71dfffaa74dfffd479e1ff7e7ae1ff8a7de1ff5a82e1ffbe82e1ffca85e1fffefaffff00000000444400004a950000c2a10000
+    m_ExpandedIDs: 8a5bffff4e5cffff5e5ffffffcfaffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Game Controller
-      m_OriginalName: Game Controller
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 17642
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 

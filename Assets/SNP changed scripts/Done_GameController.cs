@@ -130,9 +130,9 @@ public class Done_GameController : MonoBehaviour
                 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
                 currentHazards.Add(Instantiate(hazard, spawnPosition, spawnRotation));
-                yield return new WaitForSeconds(startWait);
+                yield return new WaitForSeconds(spawnWait);
             }
-            yield return new WaitForSeconds(startWait);
+            yield return new WaitForSeconds(waveWait);
 
             if (gameOver)
             {
