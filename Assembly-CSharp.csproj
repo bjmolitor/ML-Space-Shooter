@@ -158,6 +158,7 @@
     <Compile Include="Assets\SNP changed scripts\Done_DestroyByContact.cs" />
     <Compile Include="Assets\SNP changed scripts\Done_GameController.cs" />
     <Compile Include="Assets\SNP changed scripts\Done_PlayerController.cs" />
+    <Compile Include="Assets\SNP changed scripts\Grower.cs" />
     <Compile Include="Assets\SNP changed scripts\PlayerAgent.cs" />
     <Compile Include="Assets\SNP changed scripts\SpaceShooterAcademy.cs" />
     <Compile Include="Assets\Space Shooter Tutorial\_Complete-Game\Scripts\Done_BGScroller.cs" />

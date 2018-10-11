@@ -11,7 +11,7 @@ public class Done_GameController : MonoBehaviour
     public GameObject playerShip;
     public GameObject[] hazards;
     public GameObject earth;
-    public float spawnEarth = 8;
+    public float spawnEarth = 4;
     public float earthScale = 0.4f;
     public Vector3 spawnValues;
     public int hazardCount;
@@ -114,7 +114,7 @@ public class Done_GameController : MonoBehaviour
 
     private void SpawnEarth()
     {
-        spawnedEarth = Instantiate(earth, new Vector3(-3, -14, 30), Quaternion.Euler(0,0,30)); 
+        spawnedEarth = Instantiate(earth, new Vector3(-3, -22, 60), Quaternion.Euler(0,0,30)); 
         spawnedEarth.transform.localScale = new Vector3(earthScale, earthScale, earthScale);
         earthPassed = true;
     }
