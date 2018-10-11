@@ -7,7 +7,7 @@ public class SpaceShooterAcademy : Academy
 {
     public float playerTimeScale = 0.5f;
 
-    private PlayerAgent playerAgent;
+    /*private PlayerAgent playerAgent;
 
     public override void InitializeAcademy()
     {
@@ -22,10 +22,15 @@ public class SpaceShooterAcademy : Academy
         //FindObjectOfType<PlayerAgent>();
         // Slow the game down, if the PlayerAgent in manually controlled
         if (playerAgent.brain.brainType == BrainType.Player) {
-            Time.timeScale = playerTimeScale;
-            Time.fixedDeltaTime = 0.02F * Time.timeScale;
+            ApplyPlayerTimeScale();
         }
 
     }
-    
+
+    public void ApplyPlayerTimeScale()
+    {
+        Time.timeScale = playerTimeScale;
+        Time.fixedDeltaTime = 0.02F * Time.timeScale;
+    }
+    */
 }

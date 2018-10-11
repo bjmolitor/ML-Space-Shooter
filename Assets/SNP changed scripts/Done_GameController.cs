@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using MLAgents;
+//using System;
 
 public class Done_GameController : MonoBehaviour
 {
@@ -129,9 +130,9 @@ public class Done_GameController : MonoBehaviour
                 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
                 currentHazards.Add(Instantiate(hazard, spawnPosition, spawnRotation));
-                yield return new WaitForSeconds(spawnWait);
+                yield return new WaitForSeconds(startWait);
             }
-            yield return new WaitForSeconds(waveWait);
+            yield return new WaitForSeconds(startWait);
 
             if (gameOver)
             {
@@ -169,7 +170,7 @@ public class Done_GameController : MonoBehaviour
             // Size of reward chosen in relation to score to what would be a "good game".
             playerAgent.SetReward(-100);
             playerAgent.Done();
-            Debug.Log("Average AI score after " + ++numGames + " games:" + ((overallScore += score) / numGames));
+            //Debug.Log("Average AI score after " + ++numGames + " games:" + ((overallScore += score) / numGames));
             // Immediate restart - no actual destroy.
             Restart();
         }

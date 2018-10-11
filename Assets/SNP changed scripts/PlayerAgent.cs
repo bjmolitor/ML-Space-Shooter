@@ -38,6 +38,7 @@ public class PlayerAgent : Agent
     public void ManualBrain()
     {
         GiveBrain(manualBrain);
+        
     }
 
     public void MLBrain()
@@ -119,12 +120,22 @@ public class PlayerAgent : Agent
 
     private void AddHazardVectors(GameObject gameObject)
     {
-        //Add relative x and y positions of hazards
+        /*//Add relative x and y positions of hazards
         AddVectorObs(CalcRelPos(gameObject.transform.position.x, boundary.xMin, boundary.xMax));
         //z-Position takes into account, that objects sometimes spawn or fly outside the play field
         if (gameObject.transform.position.z > boundary.zMax) AddVectorObs(1);
         else if (gameObject.transform.position.z < boundary.zMin) AddVectorObs(-1);
-        else AddVectorObs(CalcRelPos(gameObject.transform.position.z, boundary.zMin, boundary.zMax));
+        else AddVectorObs(CalcRelPos(gameObject.transform.position.z, boundary.zMin, boundary.zMax));*/
+
+        //Use relative position
+        Vector3 relativePosition = rBody.transform.position - gameObject.transform.position;
+
+        //x has fixed boundaries which can not be crossed
+        AddVectorObs(relativePosition.x / (Math.Abs(boundary.xMin) + boundary.xMax));
+
+        //For y values larger then 1 and smaller -1 are irrelevant - distance longer then one playfield
+        AddVectorObs(Mathf.Clamp(relativePosition.z / (Math.Abs(boundary.zMin) + boundary.zMax), -1, 1));
+
     }
 
     // returns 0..1 relative to the position between 0 and max and -1..0 for position between min and 0
@@ -165,7 +176,7 @@ public class PlayerAgent : Agent
             );
 
         // Actual comparison
-        if (distanceFromX < distanceFromY) return 1;
+        if (distanceFromX > distanceFromY) return 1;
         else if (distanceFromX == distanceFromY) return 0;
             else return -1; 
     }
@@ -179,7 +190,7 @@ public class PlayerAgent : Agent
 
         if (fire > 0 && Time.time > nextFire)
         {
-            nextFire = Time.time + fireRate;
+            nextFire = Time.time + (fireRate * 60 * Time.deltaTime);
             Instantiate(shot, new Vector3(rBody.position.x, rBody.position.y, rBody.position.z + shotOffset), rBody.rotation);
             aSource.Play();
         }

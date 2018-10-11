@@ -22,13 +22,13 @@ public class Done_EvasiveManeuver : MonoBehaviour
 	
 	IEnumerator Evade ()
 	{
-		yield return new WaitForSeconds (Random.Range (startWait.x, startWait.y));
+		yield return new WaitForSeconds (Random.Range (startWait.x * 60 * Time.deltaTime, startWait.y * 60 * Time.deltaTime));
 		while (true)
 		{
 			targetManeuver = Random.Range (1, dodge) * -Mathf.Sign (transform.position.x);
-			yield return new WaitForSeconds (Random.Range (maneuverTime.x, maneuverTime.y));
+			yield return new WaitForSeconds (Random.Range (maneuverTime.x * 60 * Time.deltaTime, maneuverTime.y * 60 * Time.deltaTime));
 			targetManeuver = 0;
-			yield return new WaitForSeconds (Random.Range (maneuverWait.x, maneuverWait.y));
+			yield return new WaitForSeconds (Random.Range (maneuverWait.x * 60 * Time.deltaTime, maneuverWait.y * 60 * Time.deltaTime));
 		}
 	}
 	
