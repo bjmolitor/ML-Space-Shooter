@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 124
+  controlID: 89
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 29
+  controlID: 90
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -633,20 +633,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Space Shooter Tutorial/_Complete-Game/Prefabs
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Space Shooter Tutorial/_Complete-Game/Prefabs
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\bmolitor\UnityProjects\ML-Space-Shooter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8e2f0000
-    m_LastClickedID: 12174
-    m_ExpandedIDs: 000000006c2d00008e2f00004c310000dc3400006c37000086370000043a0000583e0000383f0000504100008842000000ca9a3b
+    m_SelectedIDs: 6e2d0000
+    m_LastClickedID: 11630
+    m_ExpandedIDs: 000000006e2d0000922f000052310000e2340000723700008c3700000a3a00005e3e00003e3f0000564100008e42000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -674,7 +674,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 364}
     m_SelectedIDs: 8e340000
     m_LastClickedID: 13454
-    m_ExpandedIDs: 000000006c2d00004c310000dc3400006c37000086370000043a0000583e0000383f00005041000088420000
+    m_ExpandedIDs: 000000006e2d0000922f000052310000e2340000723700008c3700000a3a00005e3e00003e3f0000564100008e420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 5a1900004a190000f01b00005a3c0000cc4100008a3400005c3700006041000080420000f8370000be3b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -758,21 +758,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: c2e6e8ff96e7e8ffb6eae8ff3417f4ffac7ffdffc07ffdffc27ffdff38aafdffb891feff669bfefff239ffff083affffe043ffffe480fffff284ffff8c98ffffd2d7ffff98d8ffffa8dbffff68e2ffff2ce3ffff38e6fffffefaffff0000000046440000e44f00005a52000070520000245a0000925a0000ae6300003c640000
+    m_ExpandedIDs: d8efffff9cf0ffffb4f3fffffefaffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Canvas
-      m_OriginalName: Canvas
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 25550
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
