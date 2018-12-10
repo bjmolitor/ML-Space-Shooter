@@ -1,6 +1,6 @@
 # Project specific exclusions
 summaries/
-models/
+#models/
 
 # ML-Agents is a project of it's own (which has large files)
 Assets/ML-Agents/
