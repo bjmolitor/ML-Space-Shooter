@@ -42,6 +42,7 @@ public class Done_DestroyByContact : MonoBehaviour
             }
             else
             {
+                Destroy(other.gameObject);
                 return;
             }
 			
