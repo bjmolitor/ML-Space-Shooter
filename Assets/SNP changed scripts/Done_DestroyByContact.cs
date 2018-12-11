@@ -33,7 +33,13 @@ public class Done_DestroyByContact : MonoBehaviour
 			return;
 		}
 
-		if (explosion != null)
+        if (other.tag == "Player")
+        {
+            Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+            gameController.GameOver();
+        }
+
+        if (explosion != null)
 		{
             life = life - 1;
             if(life<=0)
@@ -48,11 +54,6 @@ public class Done_DestroyByContact : MonoBehaviour
 			
 		}
 
-        if (other.tag == "Player")
-        {
-            Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-            gameController.GameOver();
-        }
         else gameController.AddScore(scoreValue);
         
         Destroy(other.gameObject);
