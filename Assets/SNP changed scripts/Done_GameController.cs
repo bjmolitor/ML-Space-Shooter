@@ -23,6 +23,7 @@ public class Done_GameController : MonoBehaviour
     public Text restartText;
     public Text gameOverText;
     public Text brainSwitch;
+    public float bosstime;
 
     private float startTime;
     private bool gameOver;
@@ -34,6 +35,7 @@ public class Done_GameController : MonoBehaviour
     private List<GameObject> currentHazards = new List<GameObject>();
     private PlayerAgent playerAgent;
     private GameObject spawnedEarth;
+    private int bosstimes = 1;
 
     public List<GameObject> CurrentHazards
     {
@@ -85,6 +87,12 @@ public class Done_GameController : MonoBehaviour
         }
 
         if (spawnedEarth == null && Time.time >= startTime + spawnEarth && !gameOver && !earthPassed) SpawnEarth();
+
+        if(Time.time >= startTime + bosstime * bosstimes)
+        {
+            bosstimes = bosstimes + 1;
+            SpawnBoss();
+        }
         
     }
 
@@ -119,6 +127,14 @@ public class Done_GameController : MonoBehaviour
         earthPassed = true;
     }
 
+    private void SpawnBoss()
+    {
+        GameObject hazard = hazards[6];
+        Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+        Quaternion spawnRotation = Quaternion.identity;
+        currentHazards.Add(Instantiate(hazard, spawnPosition, spawnRotation));
+    }
+
     IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);
@@ -126,7 +142,7 @@ public class Done_GameController : MonoBehaviour
         {
             for (int i = 0; i < hazardCount; i++)
             {
-                GameObject hazard = hazards[Random.Range(0, hazards.Length)];
+                GameObject hazard = hazards[Random.Range(0, hazards.Length-1)];
                 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
                 currentHazards.Add(Instantiate(hazard, spawnPosition, spawnRotation));
