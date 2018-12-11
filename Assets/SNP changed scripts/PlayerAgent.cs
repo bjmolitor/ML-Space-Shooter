@@ -57,6 +57,11 @@ public class PlayerAgent : Agent
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
+        Vector3 controlSignal = Vector3.zero;
+        controlSignal.x = vectorAction[0] * TrainingConstants.VelocityFactor;
+        controlSignal.z = vectorAction[1] * TrainingConstants.VelocityFactor;
+        rBody.AddForce(controlSignal * speed);
+
         // Actions - size 3
         if (brain.brainType == BrainType.Player) MoveShip(vectorAction[0], vectorAction[1]);
         // AI brains deliver 0 to 2 instead of -1 to 1.  
@@ -113,7 +118,7 @@ public class PlayerAgent : Agent
             {
                 AddVectorObs(Vector3.Distance(rBody.transform.position, onCollisionCourse.transform.position) / (Math.Abs(boundary.zMin) + boundary.zMax));
                 //Here's a litte danger zone bonus, to make the AI less defencive and boring
-                AddReward(0.01f);
+                AddReward(TrainingConstants.DangerZoneBonus);
             }
         }
     }

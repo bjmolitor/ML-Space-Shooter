@@ -147,7 +147,7 @@ public class Done_GameController : MonoBehaviour
     {
         score += newScoreValue;
         // Added: Set reward for player agent
-        playerAgent.AddReward(newScoreValue);
+        playerAgent.AddReward(newScoreValue * (0<newScoreValue?TrainingConstants.PositiveScoreModifier:TrainingConstants.NegativeScoreModifier));
         UpdateScore();
     }
 

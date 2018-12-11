@@ -1,14 +1,2 @@
-11.10.2018 03:35:05
+11.12.2018 16:50:30
  
-Log
-Average AI score after 1 games:-93
-UnityEngine.Debug:Log(Object)
-Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:173)
-Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
-
-Log
-Average AI score after 2 games:-178
-UnityEngine.Debug:Log(Object)
-Done_GameController:GameOver() (at Assets/SNP changed scripts/Done_GameController.cs:173)
-Done_DestroyByContact:OnTriggerEnter(Collider) (at Assets/SNP changed scripts/Done_DestroyByContact.cs:43)
-

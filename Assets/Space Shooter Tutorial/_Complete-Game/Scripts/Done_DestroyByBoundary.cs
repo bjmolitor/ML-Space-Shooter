@@ -12,7 +12,7 @@ public class Done_DestroyByBoundary : MonoBehaviour
 
     void OnTriggerExit (Collider other) 
 	{
-        gController.AddScore(-1);
+        gController.AddScore(TrainingConstants.DieMalus);
         Destroy(other.gameObject);
     }
 }
