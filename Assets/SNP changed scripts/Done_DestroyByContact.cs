@@ -6,6 +6,7 @@ public class Done_DestroyByContact : MonoBehaviour
 	public GameObject explosion;
 	public GameObject playerExplosion;
 	public int scoreValue;
+    public int life;
 
     private Done_GameController gameController;
     //private PlayerAgent playerAgent;
@@ -34,7 +35,16 @@ public class Done_DestroyByContact : MonoBehaviour
 
 		if (explosion != null)
 		{
-			Instantiate(explosion, transform.position, transform.rotation);
+            life = life - 1;
+            if(life<=0)
+            {
+                Instantiate(explosion, transform.position, transform.rotation);
+            }
+            else
+            {
+                return;
+            }
+			
 		}
 
         if (other.tag == "Player")
