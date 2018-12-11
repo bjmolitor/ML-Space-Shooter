@@ -45,6 +45,7 @@ public class Done_DestroyByContact : MonoBehaviour
             if(life<=0)
             {
                 Instantiate(explosion, transform.position, transform.rotation);
+                gameController.AddScore(scoreValue);
             }
             else
             {
