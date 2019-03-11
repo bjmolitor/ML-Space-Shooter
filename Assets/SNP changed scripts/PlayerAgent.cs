@@ -17,8 +17,9 @@ public class PlayerAgent : Agent
     public float speed;
     public float tilt;
     public Boundary boundary;
-    public Brain manualBrain;
-    public Brain mlBrain;
+    public PlayerBrain manualBrain;
+    public LearningBrain mlBrain;
+    
 
     public GameObject shot;
     public float shotOffset;
@@ -58,7 +59,8 @@ public class PlayerAgent : Agent
     public override void AgentAction(float[] vectorAction, string textAction)
     {
         // Actions - size 3
-        if (brain.brainType == BrainType.Player) MoveShip(vectorAction[0], vectorAction[1]);
+        if (brain is PlayerBrain) MoveShip(vectorAction[0], vectorAction[1]);
+        //if (brain.GetType == BrainType.Player) MoveShip(vectorAction[0], vectorAction[1]);
         // AI brains deliver 0 to 2 instead of -1 to 1.  
         else MoveShip(vectorAction[0] - 1, vectorAction[1] - 1);
         Fire(vectorAction[2]);

@@ -61,14 +61,14 @@ public class Done_GameController : MonoBehaviour
     void Update()
     {
         // There is more to it, then this.
-        if (Input.GetKeyDown(KeyCode.P) && playerAgent.brain.brainType != BrainType.Player)
+        if (Input.GetKeyDown(KeyCode.P) && playerAgent.brain is PlayerBrain)
         {
             //Switch to player brain
             playerAgent.ManualBrain();
             brainSwitch.text = "Press 'M' for auto pilot.";
         }
 
-        if (Input.GetKeyDown(KeyCode.M) && playerAgent.brain.brainType == BrainType.Player)
+        if (Input.GetKeyDown(KeyCode.M) && playerAgent.brain is PlayerBrain)
         {
             //Switch to machine learning brain
             playerAgent.MLBrain();
@@ -159,7 +159,7 @@ public class Done_GameController : MonoBehaviour
     public void GameOver()
     {
         // Added: Game Over text only for human players
-        if (playerAgent.brain.brainType == BrainType.Player)
+        if (playerAgent.brain is PlayerBrain)
         {
             gameOver = true;
             gameOverText.text = "Game Over!";
