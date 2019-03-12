@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: dbc9a2402c1df5c48a2186d5c4ea8095
+ScriptedImporter:
+  fileIDToRecycleName:
+    11400000: Assets/TFModels (AIs)/NewLearningBrain.nn
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 83221ad3db87f4b3b91b041047cb2bc5, type: 3}
