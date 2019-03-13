@@ -61,7 +61,7 @@ public class Done_GameController : MonoBehaviour
     void Update()
     {
         // There is more to it, then this.
-        if (Input.GetKeyDown(KeyCode.P) && playerAgent.brain is PlayerBrain)
+        if (Input.GetKeyDown(KeyCode.P) && playerAgent.brain is LearningBrain)
         {
             //Switch to player brain
             playerAgent.ManualBrain();
