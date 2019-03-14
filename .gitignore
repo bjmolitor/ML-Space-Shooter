@@ -9,6 +9,13 @@ Assets/New
 
 
 # Starting here: Unity.gitignore-template from the gitignore project
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+
 # Never ignore Asset meta data
 ![Aa]ssets/**/*.meta
 
@@ -56,3 +63,4 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
