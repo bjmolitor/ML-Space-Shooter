@@ -29,7 +29,7 @@ public class Done_DestroyByContact : MonoBehaviour
 
 	void OnTriggerEnter (Collider other)
 	{
-        life--;
+        
 
         //If colide boundary or other enemy do nothing and return to game
         if (other.tag == "Boundary" || other.tag == "Enemy")
@@ -37,8 +37,10 @@ public class Done_DestroyByContact : MonoBehaviour
 			return;
 		}
 
+        life--;
+
         //Perform explosion 
-		if (explosion != null && life <= 0)
+        if (explosion != null && life <= 0)
 		{
 			Instantiate(explosion, transform.position, transform.rotation);  
 		}
