@@ -11,6 +11,7 @@ public class Done_GameController : MonoBehaviour
     public GameObject playerShip;
     public GameObject[] hazards;
     public GameObject earth;
+    public GameObject boss;
     public float spawnEarth = 4;
     public float earthScale = 0.4f;
     public Vector3 spawnValues;
@@ -18,6 +19,7 @@ public class Done_GameController : MonoBehaviour
     public float spawnWait;
     public float startWait;
     public float waveWait;
+    public float bosstime;
 
     public Text scoreText;
     public Text restartText;
@@ -34,6 +36,7 @@ public class Done_GameController : MonoBehaviour
     private List<GameObject> currentHazards = new List<GameObject>();
     private PlayerAgent playerAgent;
     private GameObject spawnedEarth;
+    private int bosstimes = 1;
 
     public List<GameObject> CurrentHazards
     {
@@ -85,7 +88,13 @@ public class Done_GameController : MonoBehaviour
         }
 
         if (spawnedEarth == null && Time.time >= startTime + spawnEarth && !gameOver && !earthPassed) SpawnEarth();
-        
+
+        if (Time.time >= startTime + bosstime * bosstimes)
+        {
+            bosstimes = bosstimes + 1;
+            SpawnBoss();
+        }
+
     }
 
     private void Restart()
@@ -117,6 +126,14 @@ public class Done_GameController : MonoBehaviour
         spawnedEarth = Instantiate(earth, new Vector3(-3, -22, 60), Quaternion.Euler(0,0,30)); 
         spawnedEarth.transform.localScale = new Vector3(earthScale, earthScale, earthScale);
         earthPassed = true;
+    }
+
+    private void SpawnBoss()
+    {
+        GameObject hazard = hazards[4];
+        Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+        Quaternion spawnRotation = Quaternion.identity;
+        currentHazards.Add(Instantiate(hazard, spawnPosition, spawnRotation));
     }
 
     IEnumerator SpawnWaves()
