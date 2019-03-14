@@ -11,6 +11,7 @@ public class Done_GameController : MonoBehaviour
     public GameObject playerShip;
     public GameObject[] hazards;
     public GameObject earth;
+    public GameObject boss;
     public float spawnEarth = 4;
     public float earthScale = 0.4f;
     public Vector3 spawnValues;
@@ -18,6 +19,8 @@ public class Done_GameController : MonoBehaviour
     public float spawnWait;
     public float startWait;
     public float waveWait;
+    public float bosstime;
+    public int bossthreshold;
 
     public Text scoreText;
     public Text restartText;
@@ -34,6 +37,8 @@ public class Done_GameController : MonoBehaviour
     private List<GameObject> currentHazards = new List<GameObject>();
     private PlayerAgent playerAgent;
     private GameObject spawnedEarth;
+    private GameObject spawnedBoss;
+    private int bosscount;
 
     public List<GameObject> CurrentHazards
     {
@@ -55,7 +60,9 @@ public class Done_GameController : MonoBehaviour
         UpdateScore();
         playerAgent.Initialize(Instantiate(playerShip), this);
         StartCoroutine(SpawnWaves());
+        StartCoroutine(SpawnBosses());
         startTime = Time.time;
+        bosscount = 1;
     }
 
     void Update()
@@ -85,7 +92,8 @@ public class Done_GameController : MonoBehaviour
         }
 
         if (spawnedEarth == null && Time.time >= startTime + spawnEarth && !gameOver && !earthPassed) SpawnEarth();
-        
+
+
     }
 
     private void Restart()
@@ -97,13 +105,16 @@ public class Done_GameController : MonoBehaviour
         currentHazards.ForEach(h => Destroy(h));
         //Destroy earth (I always wanted to do this.)
         Destroy(spawnedEarth);
+        Destroy(spawnedBoss);
         earthPassed = false;
-        // Reset score
+        // Reset score and bosscount
         score = 0;
         UpdateScore();
         startTime = Time.time;
+        bosscount = 1;
         // Restart spawning for human players
         if (gameOver) StartCoroutine(SpawnWaves());
+        if (gameOver) StartCoroutine(SpawnBosses());
         gameOver = false;
         // Respawn player
         playerAgent.Initialize(Instantiate(playerShip), this);
@@ -117,6 +128,16 @@ public class Done_GameController : MonoBehaviour
         spawnedEarth = Instantiate(earth, new Vector3(-3, -22, 60), Quaternion.Euler(0,0,30)); 
         spawnedEarth.transform.localScale = new Vector3(earthScale, earthScale, earthScale);
         earthPassed = true;
+    }
+
+    private void SpawnBoss()
+    {
+        if (!spawnedBoss)
+        {
+            spawnedBoss = Instantiate(boss, new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z), Quaternion.identity);
+            spawnedBoss.transform.localScale = new Vector3(earthScale, earthScale, earthScale);
+            bosscount = bosscount + 1;
+        }
     }
 
     IEnumerator SpawnWaves()
@@ -133,6 +154,26 @@ public class Done_GameController : MonoBehaviour
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
+
+            if (gameOver)
+            {
+                restartText.text = "Press 'R' for Restart";
+                restart = true;
+                break;
+            }
+        }
+    }
+
+    IEnumerator SpawnBosses()
+    {
+        yield return new WaitForSeconds(bosstime);
+        while (true)
+        {
+            yield return new WaitForSeconds(bosstime);
+            if (score >= bossthreshold * bosscount)
+            {
+                SpawnBoss();
+            }
 
             if (gameOver)
             {

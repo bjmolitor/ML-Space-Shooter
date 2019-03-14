@@ -5,7 +5,9 @@ public class Done_DestroyByContact : MonoBehaviour
 {
 	public GameObject explosion;
 	public GameObject playerExplosion;
-	public int scoreValue;
+	public int scoreValue = 20;
+    public int scoreValueOnHit = 0;
+    public int life = 1;
 
     private Done_GameController gameController;
     //private PlayerAgent playerAgent;
@@ -27,25 +29,38 @@ public class Done_DestroyByContact : MonoBehaviour
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.tag == "Boundary" || other.tag == "Enemy")
+        
+
+        //If colide boundary or other enemy do nothing and return to game
+        if (other.tag == "Boundary" || other.tag == "Enemy")
 		{
 			return;
 		}
 
-		if (explosion != null)
+        life--;
+
+        //Perform explosion 
+        if (explosion != null && life <= 0)
 		{
-			Instantiate(explosion, transform.position, transform.rotation);
+			Instantiate(explosion, transform.position, transform.rotation);  
 		}
 
+        //Colide with player is game over for player
         if (other.tag == "Player")
         {
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
             gameController.GameOver();
         }
-        else gameController.AddScore(scoreValue);
-        
+                
         Destroy(other.gameObject);
-        Destroy (gameObject);
+        gameController.AddScore(scoreValueOnHit);
+
+        //If no remaining life destroy me, 
+        if (life <= 0)
+        {
+            Destroy(gameObject);
+            gameController.AddScore(scoreValue);
+        }
 	}
 
     private void OnDestroy()
