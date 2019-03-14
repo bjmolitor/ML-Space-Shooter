@@ -130,7 +130,7 @@ public class Done_GameController : MonoBehaviour
 
     private void SpawnBoss()
     {
-        GameObject hazard = hazards[4];
+        GameObject hazard = hazards[3];
         Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
         Quaternion spawnRotation = Quaternion.identity;
         currentHazards.Add(Instantiate(hazard, spawnPosition, spawnRotation));
