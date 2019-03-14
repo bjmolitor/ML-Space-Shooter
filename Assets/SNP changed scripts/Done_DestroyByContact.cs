@@ -29,8 +29,10 @@ public class Done_DestroyByContact : MonoBehaviour
 
 	void OnTriggerEnter (Collider other)
 	{
+        life--;
+
         //If colide boundary or other enemy do nothing and return to game
-		if (other.tag == "Boundary" || other.tag == "Enemy")
+        if (other.tag == "Boundary" || other.tag == "Enemy")
 		{
 			return;
 		}
@@ -50,7 +52,6 @@ public class Done_DestroyByContact : MonoBehaviour
                 
         Destroy(other.gameObject);
         gameController.AddScore(scoreValueOnHit);
-        life--;
 
         //If no remaining life destroy me, 
         if (life <= 0)
