@@ -5,8 +5,9 @@ public class Done_DestroyByContact : MonoBehaviour
 {
 	public GameObject explosion;
 	public GameObject playerExplosion;
-	public int scoreValue;
-    public int life;
+	public int scoreValue = 20;
+    public int scoreValueOnHit = 0;
+    public int life = 1;
 
     private Done_GameController gameController;
     //private PlayerAgent playerAgent;
@@ -35,7 +36,7 @@ public class Done_DestroyByContact : MonoBehaviour
 		}
 
         //Perform explosion 
-		if (explosion != null && life == 0)
+		if (explosion != null && life <= 0)
 		{
 			Instantiate(explosion, transform.position, transform.rotation);  
 		}
@@ -48,17 +49,14 @@ public class Done_DestroyByContact : MonoBehaviour
         }
                 
         Destroy(other.gameObject);
+        gameController.AddScore(scoreValueOnHit);
+        life--;
 
-        //If no remaining life destroy me, while remaining life substract on
-        if (life == 0)
+        //If no remaining life destroy me, 
+        if (life <= 0)
         {
             Destroy(gameObject);
             gameController.AddScore(scoreValue);
-        }
-        else
-        {
-            life--;
-            return;
         }
 	}
 
