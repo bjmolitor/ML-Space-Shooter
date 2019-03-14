@@ -36,7 +36,7 @@ public class Done_GameController : MonoBehaviour
     private List<GameObject> currentHazards = new List<GameObject>();
     private PlayerAgent playerAgent;
     private GameObject spawnedEarth;
-    private int bosstimes = 1;
+    private GameObject spawnedBoss;
 
     public List<GameObject> CurrentHazards
     {
@@ -58,6 +58,7 @@ public class Done_GameController : MonoBehaviour
         UpdateScore();
         playerAgent.Initialize(Instantiate(playerShip), this);
         StartCoroutine(SpawnWaves());
+        StartCoroutine(SpawnBosses());
         startTime = Time.time;
     }
 
@@ -89,11 +90,6 @@ public class Done_GameController : MonoBehaviour
 
         if (spawnedEarth == null && Time.time >= startTime + spawnEarth && !gameOver && !earthPassed) SpawnEarth();
 
-        if (Time.time >= startTime + bosstime * bosstimes)
-        {
-            bosstimes = bosstimes + 1;
-            SpawnBoss();
-        }
 
     }
 
@@ -106,6 +102,7 @@ public class Done_GameController : MonoBehaviour
         currentHazards.ForEach(h => Destroy(h));
         //Destroy earth (I always wanted to do this.)
         Destroy(spawnedEarth);
+        Destroy(spawnedBoss);
         earthPassed = false;
         // Reset score
         score = 0;
@@ -113,6 +110,7 @@ public class Done_GameController : MonoBehaviour
         startTime = Time.time;
         // Restart spawning for human players
         if (gameOver) StartCoroutine(SpawnWaves());
+        if (gameOver) StartCoroutine(SpawnBosses());
         gameOver = false;
         // Respawn player
         playerAgent.Initialize(Instantiate(playerShip), this);
@@ -130,10 +128,8 @@ public class Done_GameController : MonoBehaviour
 
     private void SpawnBoss()
     {
-        GameObject hazard = hazards[3];
-        Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
-        Quaternion spawnRotation = Quaternion.identity;
-        currentHazards.Add(Instantiate(hazard, spawnPosition, spawnRotation));
+        spawnedBoss = Instantiate(boss, new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z), Quaternion.identity);
+        spawnedBoss.transform.localScale = new Vector3(earthScale, earthScale, earthScale);
     }
 
     IEnumerator SpawnWaves()
@@ -150,6 +146,23 @@ public class Done_GameController : MonoBehaviour
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
+
+            if (gameOver)
+            {
+                restartText.text = "Press 'R' for Restart";
+                restart = true;
+                break;
+            }
+        }
+    }
+
+    IEnumerator SpawnBosses()
+    {
+        yield return new WaitForSeconds(bosstime);
+        while (true)
+        {
+            SpawnBoss();
+            yield return new WaitForSeconds(bosstime);
 
             if (gameOver)
             {
