@@ -20,6 +20,7 @@ public class Done_GameController : MonoBehaviour
     public float startWait;
     public float waveWait;
     public float bosstime;
+    public int bossthreshold;
 
     public Text scoreText;
     public Text restartText;
@@ -37,6 +38,7 @@ public class Done_GameController : MonoBehaviour
     private PlayerAgent playerAgent;
     private GameObject spawnedEarth;
     private GameObject spawnedBoss;
+    private int bosscount;
 
     public List<GameObject> CurrentHazards
     {
@@ -60,6 +62,7 @@ public class Done_GameController : MonoBehaviour
         StartCoroutine(SpawnWaves());
         StartCoroutine(SpawnBosses());
         startTime = Time.time;
+        bosscount = 1;
     }
 
     void Update()
@@ -104,10 +107,11 @@ public class Done_GameController : MonoBehaviour
         Destroy(spawnedEarth);
         Destroy(spawnedBoss);
         earthPassed = false;
-        // Reset score
+        // Reset score and bosscount
         score = 0;
         UpdateScore();
         startTime = Time.time;
+        bosscount = 1;
         // Restart spawning for human players
         if (gameOver) StartCoroutine(SpawnWaves());
         if (gameOver) StartCoroutine(SpawnBosses());
@@ -130,6 +134,7 @@ public class Done_GameController : MonoBehaviour
     {
         spawnedBoss = Instantiate(boss, new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z), Quaternion.identity);
         spawnedBoss.transform.localScale = new Vector3(earthScale, earthScale, earthScale);
+        bosscount = bosscount + 1;
     }
 
     IEnumerator SpawnWaves()
@@ -161,8 +166,11 @@ public class Done_GameController : MonoBehaviour
         yield return new WaitForSeconds(bosstime);
         while (true)
         {
-            SpawnBoss();
             yield return new WaitForSeconds(bosstime);
+            if (score >= bossthreshold * bosscount)
+            {
+                SpawnBoss();
+            }
 
             if (gameOver)
             {
