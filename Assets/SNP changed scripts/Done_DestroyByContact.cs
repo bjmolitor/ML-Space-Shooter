@@ -58,6 +58,7 @@ public class Done_DestroyByContact : MonoBehaviour
         else
         {
             life--;
+            return;
         }
 	}
 
