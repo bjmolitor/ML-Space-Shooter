@@ -132,9 +132,12 @@ public class Done_GameController : MonoBehaviour
 
     private void SpawnBoss()
     {
-        spawnedBoss = Instantiate(boss, new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z), Quaternion.identity);
-        spawnedBoss.transform.localScale = new Vector3(earthScale, earthScale, earthScale);
-        bosscount = bosscount + 1;
+        if (!spawnedBoss)
+        {
+            spawnedBoss = Instantiate(boss, new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z), Quaternion.identity);
+            spawnedBoss.transform.localScale = new Vector3(earthScale, earthScale, earthScale);
+            bosscount = bosscount + 1;
+        }
     }
 
     IEnumerator SpawnWaves()

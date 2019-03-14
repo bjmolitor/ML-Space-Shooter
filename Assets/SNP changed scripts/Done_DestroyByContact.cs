@@ -46,14 +46,14 @@ public class Done_DestroyByContact : MonoBehaviour
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
             gameController.GameOver();
         }
-        else gameController.AddScore(scoreValue);
-        
+                
         Destroy(other.gameObject);
 
         //If no remaining life destroy me, while remaining life substract on
         if (life == 0)
         {
             Destroy(gameObject);
+            gameController.AddScore(scoreValue);
         }
         else
         {
