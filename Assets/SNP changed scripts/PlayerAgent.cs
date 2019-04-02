@@ -15,6 +15,7 @@ public class Boundary
 public class PlayerAgent : Agent
 {
     public float speed;
+    public float maxVelocity;
     public float tilt;
     public Boundary boundary;
     public PlayerBrain manualBrain;
@@ -204,7 +205,18 @@ public class PlayerAgent : Agent
         if (rBody == null) return;
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        rBody.velocity = movement * speed;
+        // This instantly applies the full speed and thereby causes stuttering of the ship
+        // rBody.velocity = movement * speed;
+
+        rBody.AddForce(movement * speed);
+
+        // Prevent ship from moving to fast into any direction
+        rBody.velocity = new Vector3
+        (
+            Mathf.Clamp(rBody.velocity.x, -maxVelocity, maxVelocity),
+            0.0f,
+            Mathf.Clamp(rBody.velocity.z, -maxVelocity, maxVelocity)
+        );
 
         // Prevent ship from leaving the screen
         rBody.position = new Vector3
