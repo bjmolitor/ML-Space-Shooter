@@ -9,7 +9,7 @@ Assets/New
 
 
 # Starting here: Unity.gitignore-template from the gitignore project
-[Ll]ibrary/
+#[Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
