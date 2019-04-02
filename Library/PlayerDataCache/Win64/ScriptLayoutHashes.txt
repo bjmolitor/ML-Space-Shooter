@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/bmolitor/UnityProjects/ML-Space-Shooter/Builds/Intermediate Build/ML Space Shooter.exe
+C:/Users/bmolitor/UnityProjects/ML-Space-Shooter/Academy/Boss_Enemy/ML Space Shooter.exe
 SceneListBegin?
 Assets/Scenes/Done_Main.unity
 SceneListEnd?

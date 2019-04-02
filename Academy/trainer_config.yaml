@@ -23,7 +23,7 @@ default:
 
 # These are the Space Shooter specific parameters for the learning    
 
-NewLearningBrain:
+NewerLearningBrain:
     max_steps: 5.0e6
     num_layers: 3
     hidden_units: 512   

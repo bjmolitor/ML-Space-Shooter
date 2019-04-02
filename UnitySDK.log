@@ -1,5 +1,17 @@
-13.03.2019 09:59:32
+02.04.2019 14:08:01
  
 Warning
-Default audio device was changed, but the audio system failed to initialize it. Attempting to reset sound system.
+Can not play a disabled audio source
+UnityEngine.AudioSource:Play()
+Done_WeaponController:Fire() (at Assets/Space Shooter Tutorial/_Complete-Game/Scripts/Done_WeaponController.cs:21)
+
+Warning
+Can not play a disabled audio source
+UnityEngine.AudioSource:Play()
+Done_WeaponController:Fire() (at Assets/Space Shooter Tutorial/_Complete-Game/Scripts/Done_WeaponController.cs:21)
+
+Warning
+Can not play a disabled audio source
+UnityEngine.AudioSource:Play()
+Done_WeaponController:Fire() (at Assets/Space Shooter Tutorial/_Complete-Game/Scripts/Done_WeaponController.cs:21)
 
